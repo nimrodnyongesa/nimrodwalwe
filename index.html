@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nimrod Nyongesa | Fullstack Engineer & AI Systems Builder</title>
+  <meta name="description" content="I architect full-stack systems that think — LLM-powered backends, autonomous agent pipelines, and the frontends that make them usable. 5+ years shipping production code from Nairobi." />
+  <meta name="author" content="Nimrod Nyongesa" />
+  <meta property="og:title" content="Nimrod Nyongesa | Fullstack Engineer & AI Systems Builder" />
+  <meta property="og:description" content="LLM-powered backends, autonomous agent pipelines, and the frontends that make them usable." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══ NAV ═══ -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav__logo"><span class="brace">{</span>NN<span class="brace">}</span></a>
+    <div class="nav__links" id="navLinks">
+      <a href="#about">about</a>
+      <a href="#skills">skills</a>
+      <a href="#projects">projects</a>
+      <a href="#experience">experience</a>
+      <a href="#contact">contact</a>
+    </div>
+    <button class="nav__burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="hero">
+    <canvas id="gridCanvas" class="hero__canvas"></canvas>
+    <div class="hero__content">
+      <p class="hero__label fade-up">Hi, my name is</p>
+      <h1 class="hero__name fade-up" style="--d:.1s">Nimrod Nyongesa</h1>
+      <div class="hero__typing fade-up" style="--d:.2s">
+        <span id="typed"></span><span class="caret">|</span>
+      </div>
+      <p class="hero__bio fade-up" style="--d:.3s">
+        I architect full-stack systems that think &mdash; LLM-powered backends,<br class="hide-mobile" />
+        autonomous agent pipelines, and the frontends that make them usable.<br class="hide-mobile" />
+        5+ years shipping production code from Nairobi.
+      </p>
+      <div class="hero__cta fade-up" style="--d:.4s">
+        <a href="#projects" class="btn btn--primary">View My Work</a>
+        <a href="#contact" class="btn btn--ghost">Get In Touch</a>
+      </div>
+      <div class="hero__socials fade-up" style="--d:.5s">
+        <a href="https://linkedin.com/in/nimrod-nyongesa-walwe" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://medium.com/@nimrodnyongesa7" target="_blank" rel="noopener" aria-label="Medium">
+          <svg viewBox="0 0 24 24"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+        </a>
+        <a href="https://youtube.com/@GamersPulseKE" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="https://x.com/NyongesaNi97790" target="_blank" rel="noopener" aria-label="X / Twitter">
+          <svg viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932zM17.61 20.644h2.039L6.486 3.24H4.298z"/></svg>
+        </a>
+        <a href="https://reddit.com/user/The_silentassasin" target="_blank" rel="noopener" aria-label="Reddit">
+          <svg viewBox="0 0 24 24"><path d="M12 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 01-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 01.042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 014.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 01.14-.197.35.35 0 01.238-.042l2.906.617a1.214 1.214 0 011.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 00-.231.094.33.33 0 000 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 000-.462.342.342 0 00-.462 0c-.545.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.345.345 0 00-.231-.095z"/></svg>
+        </a>
+        <a href="mailto:nimrodnyongesa7@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══ DIVIDER ═══ -->
+  <div class="divider"><div class="divider__line"></div></div>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section__heading slide-in"><span class="hash">&gt;</span> about</h2>
+      <div class="about">
+        <div class="about__text slide-in">
+          <p>
+            I'm a fullstack engineer and AI systems builder based in <strong>Nairobi, Kenya</strong>.
+            I spend most of my time at the intersection of backend architecture and AI &mdash;
+            building autonomous workflows, RAG pipelines, and LLM-powered tools that replace
+            manual processes.
+          </p>
+          <p>
+            When I'm not wiring up agent orchestration, I'm designing API-first backends
+            that handle payments, geolocation, real-time delivery, and async job pipelines.
+            I connect these to interfaces people actually want to use &mdash; SPAs, mobile apps,
+            and real-time dashboards.
+          </p>
+          <p>
+            My philosophy: if it's not automated, it's not done. I GitOps everything,
+            containerize deployments, and instrument with proper observability. I also
+            occasionally go down rabbit holes with Rust, WebGL, and low-level systems programming.
+          </p>
+        </div>
+        <div class="about__terminal slide-in">
+          <div class="terminal">
+            <div class="terminal__bar">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+              <span class="terminal__title">nimrod@nairobi ~</span>
+            </div>
+            <div class="terminal__body">
+              <p><span class="prompt">$</span> cat about.json</p>
+<pre><code>{
+  <span class="json-key">"location"</span>: <span class="json-val">"Nairobi, Kenya"</span>,
+  <span class="json-key">"focus"</span>: <span class="json-val">"AI Systems + Fullstack"</span>,
+  <span class="json-key">"experience"</span>: <span class="json-val">"5+ years"</span>,
+  <span class="json-key">"languages"</span>: [
+    <span class="json-val">"Python"</span>, <span class="json-val">"TypeScript"</span>,
+    <span class="json-val">"Java"</span>, <span class="json-val">"C#"</span>,
+    <span class="json-val">"Rust"</span>, <span class="json-val">"C"</span>
+  ],
+  <span class="json-key">"currently"</span>: <span class="json-val">"Building agent pipelines"</span>,
+  <span class="json-key">"available"</span>: <span class="json-bool">true</span>
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><div class="divider__line"></div></div>
+
+  <!-- ═══ SKILLS ═══ -->
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="section__heading slide-in"><span class="hash">&gt;</span> what I actually build with</h2>
+      <div class="skills-grid">
+
+        <div class="skill-card slide-in">
+          <div class="skill-card__head">
+            <h3>AI & Agent Systems</h3>
+            <span class="skill-card__sub">where I spend most of my time</span>
+          </div>
+          <p>Building autonomous workflows, RAG pipelines, and LLM-powered tools that replace manual processes.</p>
+          <div class="skill-card__icons">
+            <img src="https://skillicons.dev/icons?i=python,fastapi,redis&theme=dark" alt="Python, FastAPI, Redis" loading="lazy" />
+          </div>
+          <div class="tags">
+            <span>LangChain</span><span>OpenAI APIs</span><span>HuggingFace</span>
+            <span>ChromaDB</span><span>Pinecone</span><span>Celery</span>
+            <span>Prompt Engineering</span><span>Agentic Orchestration</span>
+          </div>
+        </div>
+
+        <div class="skill-card slide-in">
+          <div class="skill-card__head">
+            <h3>Backend Architecture</h3>
+            <span class="skill-card__sub">APIs, queues, and the plumbing</span>
+          </div>
+          <p>Designing API-first backends that handle payments, geolocation, real-time delivery, and async job orchestration.</p>
+          <div class="skill-card__icons">
+            <img src="https://skillicons.dev/icons?i=django,nestjs,spring,dotnet,express&theme=dark" alt="Django, NestJS, Spring, .NET, Express" loading="lazy" />
+          </div>
+          <div class="tags">
+            <span>Django REST</span><span>FastAPI</span><span>GraphQL</span>
+            <span>Celery + Redis</span><span>M-Pesa Integration</span>
+            <span>JWT</span><span>WebSockets</span>
+          </div>
+        </div>
+
+        <div class="skill-card slide-in">
+          <div class="skill-card__head">
+            <h3>Frontend & Mobile</h3>
+            <span class="skill-card__sub">making complex systems feel simple</span>
+          </div>
+          <p>Connecting AI backends to interfaces people actually want to use. SPAs, mobile apps, real-time dashboards.</p>
+          <div class="skill-card__icons">
+            <img src="https://skillicons.dev/icons?i=react,nextjs,svelte,angular,flutter&theme=dark" alt="React, Next.js, Svelte, Angular, Flutter" loading="lazy" />
+          </div>
+          <div class="tags">
+            <span>React Native</span><span>Expo</span><span>Three.js</span>
+            <span>GSAP</span><span>anime.js</span><span>Tailwind</span>
+            <span>Shadcn</span><span>SVG illustration</span>
+          </div>
+        </div>
+
+        <div class="skill-card slide-in">
+          <div class="skill-card__head">
+            <h3>DevOps & Infrastructure</h3>
+            <span class="skill-card__sub">GitOps everything</span>
+          </div>
+          <p>CI/CD pipelines, containerized deployments, monitoring. If it's not automated, it's not done.</p>
+          <div class="skill-card__icons">
+            <img src="https://skillicons.dev/icons?i=docker,kubernetes,aws,gcp,githubactions&theme=dark" alt="Docker, K8s, AWS, GCP, GitHub Actions" loading="lazy" />
+          </div>
+          <div class="tags">
+            <span>Jenkins</span><span>Nginx</span><span>Caddy</span>
+            <span>Prometheus</span><span>Grafana</span>
+            <span>OpenTelemetry</span><span>Terraform</span>
+          </div>
+        </div>
+
+        <div class="skill-card slide-in">
+          <div class="skill-card__head">
+            <h3>Data Layer</h3>
+            <span class="skill-card__sub">where state lives</span>
+          </div>
+          <p>Picking the right store for the job &mdash; relational for transactions, document for flexibility, vector for AI.</p>
+          <div class="skill-card__icons">
+            <img src="https://skillicons.dev/icons?i=postgres,mongodb,redis,supabase,firebase&theme=dark" alt="PostgreSQL, MongoDB, Redis, Supabase, Firebase" loading="lazy" />
+          </div>
+          <div class="tags">
+            <span>ChromaDB</span><span>Pinecone</span><span>MySQL</span>
+            <span>Cassandra</span><span>Prisma</span><span>Sequelize</span>
+          </div>
+        </div>
+
+        <div class="skill-card slide-in">
+          <div class="skill-card__head">
+            <h3>Systems & Low-Level</h3>
+            <span class="skill-card__sub">the rabbit holes</span>
+          </div>
+          <p>When I want to understand how things actually work under the hood.</p>
+          <div class="skill-card__icons">
+            <img src="https://skillicons.dev/icons?i=rust,c,zig,lua,arduino&theme=dark" alt="Rust, C, Zig, Lua, Arduino" loading="lazy" />
+          </div>
+          <div class="tags">
+            <span>WebGL</span><span>OpenGL</span><span>FFmpeg</span>
+            <span>Godot</span><span>OpenCV</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><div class="divider__line"></div></div>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section__heading slide-in"><span class="hash">&gt;</span> featured</h2>
+
+      <!-- Featured: Computer Deconstructed -->
+      <div class="project-featured slide-in">
+        <div class="project-featured__img">
+          <div class="project-featured__placeholder">
+            <svg viewBox="0 0 80 50" fill="none" stroke="currentColor" stroke-width=".7">
+              <rect x="10" y="5" width="60" height="35" rx="3"/>
+              <path d="M30 45h20M40 40v5"/>
+              <path d="M25 18l8 7-8 7" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M38 32h17" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-featured__info">
+          <span class="project-featured__label">Featured Project</span>
+          <h3>Computer Deconstructed</h3>
+          <p>
+            Interactive hardware education from silicon up. 16 chapters. 67+ hand-coded SVG illustrations.
+            Zero frameworks. Vanilla JS all the way down.
+          </p>
+          <div class="tags">
+            <span>Vanilla JS</span><span>SVG</span><span>CSS</span><span>Education</span>
+          </div>
+          <div class="project-featured__links">
+            <a href="https://learn.inkwell.sale" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Live Site</a>
+            <a href="https://github.com/nyongesa637/computer-deconstructed" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">Source</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Projects Grid -->
+      <div class="projects-grid">
+        <div class="project-card slide-in">
+          <div class="project-card__head">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="folder-icon"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+            <a href="https://www.replayhq.com/" target="_blank" rel="noopener" class="external-link" aria-label="Visit">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+          </div>
+          <h4>Replay &mdash; AI Sales Training</h4>
+          <p>AI-powered roleplay platform for sales training. Realistic conversation simulations at scale.</p>
+          <div class="tags"><span>AI/ML</span><span>Framer</span><span>Real-time</span><span>B2B SaaS</span></div>
+        </div>
+
+        <div class="project-card slide-in">
+          <div class="project-card__head">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="folder-icon"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+            <a href="https://inkwell.sale" target="_blank" rel="noopener" class="external-link" aria-label="Visit">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+          </div>
+          <h4>Inkwell &mdash; AI Document Generation</h4>
+          <p>Multi-agent AI platform automating professional document creation with five specialized agents.</p>
+          <div class="tags"><span>Next.js</span><span>LangChain</span><span>Multi-Agent</span><span>SEO</span></div>
+        </div>
+
+        <div class="project-card slide-in">
+          <div class="project-card__head">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="folder-icon"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+            <a href="https://shop.pharmaplus.co.ke/" target="_blank" rel="noopener" class="external-link" aria-label="Visit">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+          </div>
+          <h4>PharmaPlus &mdash; Healthcare E-Commerce</h4>
+          <p>Digital healthcare marketplace for Kenya with M-Pesa payments, geolocation delivery, and real-time tracking.</p>
+          <div class="tags"><span>Next.js</span><span>FastAPI</span><span>M-Pesa</span><span>Geolocation</span></div>
+        </div>
+
+        <div class="project-card slide-in">
+          <div class="project-card__head">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="folder-icon"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+            <a href="https://kuuka.v2.dyfuso.com/" target="_blank" rel="noopener" class="external-link" aria-label="Visit">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+          </div>
+          <h4>Kuuka Portal &mdash; Enterprise AI</h4>
+          <p>Multi-tenant enterprise portal with AI gateway, async Celery orchestration, and Nuxt.js frontend.</p>
+          <div class="tags"><span>Nuxt.js</span><span>Django</span><span>AI Gateway</span><span>Microservices</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><div class="divider__line"></div></div>
+
+  <!-- ═══ EXPERIENCE ═══ -->
+  <section class="section" id="experience">
+    <div class="container">
+      <h2 class="section__heading slide-in"><span class="hash">&gt;</span> experience</h2>
+      <div class="timeline">
+
+        <div class="tl-item slide-in">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-date">Jun 2025 &mdash; Present</div>
+            <h4>Fullstack Developer</h4>
+            <span class="tl-company">Replay (ReplayHQ) &middot; Remote</span>
+            <p>Building AI-powered roleplay simulations for sales training at scale. Real-time conversational AI interfaces, performance analytics dashboards, and B2B SaaS features.</p>
+          </div>
+        </div>
+
+        <div class="tl-item slide-in">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-date">Oct 2021 &mdash; Mar 2025</div>
+            <h4>AI Consultant & Backend Engineer</h4>
+            <span class="tl-company">Kuuka / Dyfuso &middot; Remote</span>
+            <p>Integrated LLMs and automated complex workflows. Engineered scalable Django/DRF backend, async task orchestration with Celery & Redis, and a dedicated AI gateway microservice.</p>
+          </div>
+        </div>
+
+        <div class="tl-item slide-in">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-date">Mar 2025 &mdash; Jun 2025</div>
+            <h4>Fullstack Developer</h4>
+            <span class="tl-company">Pharmaplus Pharmaceuticals &middot; Nairobi</span>
+            <p>Architected end-to-end customer journey: interactive shopping, M-Pesa/Visa/PayPal payments, intelligent geolocation delivery routing across Kenya.</p>
+          </div>
+        </div>
+
+        <div class="tl-item slide-in">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-date">May 2021 &mdash; Jul 2021</div>
+            <h4>QA Engineering Intern</h4>
+            <span class="tl-company">The Jitu (Teach2Give) &middot; Chuka</span>
+            <p>Manual and automated test cases, bug tracking, and collaboration with dev teams across the full development lifecycle.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <h3 class="sub-heading slide-in" style="margin-top:60px"><span class="hash">&gt;</span> education</h3>
+      <div class="timeline" style="margin-top:24px">
+        <div class="tl-item slide-in">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <h4>BSc Computer Science</h4>
+            <span class="tl-company">Chuka University &middot; Kenya</span>
+          </div>
+        </div>
+        <div class="tl-item slide-in">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <h4>React Learning Program</h4>
+            <span class="tl-company">Andela &middot; Certificate</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><div class="divider__line"></div></div>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section__heading slide-in"><span class="hash">&gt;</span> get in touch</h2>
+      <div class="contact">
+        <div class="contact__text slide-in">
+          <p>
+            Whether you need an engineer to build out an AI-powered backend,
+            want help designing agent pipelines, or have something interesting
+            in mind &mdash; I'm always open to conversation.
+          </p>
+          <a href="mailto:nimrodnyongesa7@gmail.com" class="btn btn--primary btn--lg">Say Hello</a>
+        </div>
+        <div class="contact__info slide-in">
+          <div class="contact__row">
+            <span class="contact__label">Email</span>
+            <a href="mailto:nimrodnyongesa7@gmail.com">nimrodnyongesa7@gmail.com</a>
+          </div>
+          <div class="contact__row">
+            <span class="contact__label">Phone</span>
+            <span>+254 708 669 443</span>
+          </div>
+          <div class="contact__row">
+            <span class="contact__label">Location</span>
+            <span>Nairobi, Kenya</span>
+          </div>
+          <div class="contact__socials">
+            <a href="https://linkedin.com/in/nimrod-nyongesa-walwe" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/nyongesa637" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://medium.com/@nimrodnyongesa7" target="_blank" rel="noopener">Medium</a>
+            <a href="https://youtube.com/@GamersPulseKE" target="_blank" rel="noopener">YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <p><span class="prompt">$</span> echo <span class="json-val">"Built with vanilla HTML, CSS & JS"</span></p>
+      <p class="footer__copy">&copy; 2026 Nimrod Nyongesa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
