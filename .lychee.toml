@@ -1,0 +1,23 @@
+# lychee link-checker configuration
+# Many social platforms aggressively bot-block CI runners (403/429/999),
+# so they are excluded to keep the check meaningful rather than flaky.
+
+# Treat these as always-OK (don't check) — they block or rate-limit bots.
+exclude = [
+  "^https?://(www\\.)?linkedin\\.com",
+  "^https?://(www\\.)?x\\.com",
+  "^https?://(www\\.)?twitter\\.com",
+  "^https?://(www\\.)?reddit\\.com",
+  "^https?://(www\\.)?medium\\.com",
+  "^https?://(www\\.)?youtube\\.com",
+  "^https?://skillicons\\.dev",
+  "^https?://fonts\\.(googleapis|gstatic)\\.com",
+]
+
+# Don't try to resolve mail links.
+exclude_mail = true
+
+# Be patient and polite with the remaining external hosts.
+max_retries = 3
+retry_wait_time = 2
+timeout = 20
