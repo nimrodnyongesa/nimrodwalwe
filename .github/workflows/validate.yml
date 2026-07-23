@@ -36,7 +36,6 @@ jobs:
           args: >-
             --no-progress
             --accept 200,206,403,429
-            --exclude-mail
             --max-retries 3
             index.html README.md
           fail: true
