@@ -9,3 +9,8 @@
 ^https?://(www\.)?youtube\.com
 ^https?://skillicons\.dev
 ^https?://fonts\.(googleapis|gstatic)\.com
+# Live project sites — external hosts, not this repo's responsibility to monitor.
+^https?://([a-z0-9.-]+\.)?inkwell\.sale
+^https?://([a-z0-9.-]+\.)?dyfuso\.com
+^https?://([a-z0-9.-]+\.)?pharmaplus\.co\.ke
+^https?://([a-z0-9.-]+\.)?replayhq\.com
