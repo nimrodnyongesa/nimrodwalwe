@@ -36,7 +36,8 @@ jobs:
           args: >-
             --no-progress
             --accept 200,206,403,429
-            --config .lychee.toml
+            --exclude-mail
+            --max-retries 3
             index.html README.md
           fail: true
         env:

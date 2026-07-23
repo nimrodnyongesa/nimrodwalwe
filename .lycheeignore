@@ -1,0 +1,11 @@
+# Regex patterns for URLs lychee should skip.
+# Social platforms aggressively bot-block CI runners (403/429/999),
+# so excluding them keeps the link check meaningful rather than flaky.
+^https?://(www\.)?linkedin\.com
+^https?://(www\.)?x\.com
+^https?://(www\.)?twitter\.com
+^https?://(www\.)?reddit\.com
+^https?://(www\.)?medium\.com
+^https?://(www\.)?youtube\.com
+^https?://skillicons\.dev
+^https?://fonts\.(googleapis|gstatic)\.com
