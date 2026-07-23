@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Validate HTML (html5validator / vnu)
-        uses: Cyb3r-Jak3/html5validator-action@v7.2.0
+        uses: Cyb3r-Jak3/html5validator-action@v8.0.0
         with:
           root: .
           css: true
