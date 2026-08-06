@@ -164,7 +164,6 @@ netlify deploy --dir=. --prod
 
   **Nimrod Nyongesa** &middot; Nairobi, Kenya
 
-  <a href="https://linkedin.com/in/nimrod-nyongesa-walwe"><img src="https://img.shields.io/badge/%20-0A66C2?style=flat-square&logo=linkedin&logoColor=white" height="22" /></a>&nbsp;&nbsp;
   <a href="https://github.com/nimrodnyongesa"><img src="https://img.shields.io/badge/%20-181717?style=flat-square&logo=github&logoColor=white" height="22" /></a>&nbsp;&nbsp;
   <a href="https://medium.com/@nimrodnyongesa7"><img src="https://img.shields.io/badge/%20-000000?style=flat-square&logo=medium&logoColor=white" height="22" /></a>&nbsp;&nbsp;
   <a href="mailto:nimrodnyongesa7@gmail.com"><img src="https://img.shields.io/badge/%20-EA4335?style=flat-square&logo=gmail&logoColor=white" height="22" /></a>
